@@ -1,1 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestion de Notas</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    
+     
+    </ul>
+
+    <!-- Right navbar links -->
+    </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Gestion de Notas</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Jose Duarte </a>
+        </div>
+      </div>
+
+ 
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+         
+        
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>
+                    SuperAdmin
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li onclick="gestionusuario()" class="nav-item">
+                    <a  class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Gestionar Usuarios</p>
+                    </a>
+                  </li>
+                  <li onclick="gestiondocente()" class="nav-item">
+                    <a  class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Gestionar Docentes</p>
+                    </a>
+                  </li>
+                  <li onclick="gestionasig()" class="nav-item">
+                    <a  class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Gestionar Asignaturas</p>
+                    </a>
+                  </li>
+                  <li onclick="gestioncurso()" class="nav-item">
+                    <a  class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Gestionar Cursos</p>
+                    </a>
+                  </li>
+
+                  <li onclick="misdtos()" class="nav-item">
+                    <a  class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Mis Datos</p>
+                    </a>
+                  </li>
+                 
+                  
+                </ul>
+              </li>
+
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>
+                    Docente
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  
+                  <li class="nav-item">
+                    <a  class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Gestionar cursos</p>
+                    </a>
+                  </li>
+                  <li onclick="misdtos()" class="nav-item">
+                    <a  class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Mis Datos</p>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </li>
+
+        
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Estudiante
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li onclick="calif_estudiantes()" class="nav-item">
+                <a  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Mis Calificaciones</p>
+                </a>
+              </li>
+              <li onclick="curso_estudiate()" class="nav-item">
+                <a  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Mis Cursos</p>
+                </a>
+              </li>
+              <li onclick="misdtos()" class="nav-item">
+                <a  class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Mis Datos</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+
+         
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+  
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+       
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          .
+          <!-- Left col -->
+          <section class="col-lg-12 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title" id="titulo" name="titulo">
+                 
+                </h3>
+              </div><!-- /.card-header -->
+              
+              <div class="card-body" id="informacion" name="informacion">
+               
+              </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+           
+            <!-- /.card -->
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://adminlte.io/themes/v3/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="https://adminlte.io/themes/v3/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="https://adminlte.io/themes/v3/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="https://adminlte.io/themes/v3/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="https://adminlte.io/themes/v3/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="https://adminlte.io/themes/v3/plugins/moment/moment.min.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="https://adminlte.io/themes/v3/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="https://adminlte.io/themes/v3/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="https://adminlte.io/themes/v3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="https://adminlte.io/themes/v3/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="https://adminlte.io/themes/v3/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://adminlte.io/themes/v3/dist/js/pages/dashboard.js"></script>
+
+<script>
+  function gestionusuario(){
+    
+    $("#titulo").html("Gestion de Usuarios");
+
+    var info="<table class='table table-striped table-bordered'>"
+        +"<tr>"
+          +"<th>No</th>"
+          +"<th>Nombres</th>"
+          +"<th>Apellidos</th>"
+          +"<th>Rol</th>"
+          +"<th>Opciones</th>"
+        +"</tr>"
+        +"<tr>"
+          +"<td>1</td>"
+          +"<td>Raul</td>"
+          +"<td>Gonzalez</td>"
+          +"<td>Estudiante</td>"
+          +"<td>"
+            +"<center>"
+            +"<button class='btn btn-danger'>Eliminar</button> "
+            +"<button class='btn btn-info'>Actualizar</button>"
+            +"</center>"
+          +"</td>"
+        +"</tr>"
+      +"</table>";
+
+      $("#informacion").html(info);
+  }
+
+  function gestiondocente(){
+    
+    $("#titulo").html("Gestion de Docentes");
+
+    var info="<table class='table table-striped table-bordered'>"
+        +"<tr>"
+          +"<th>No</th>"
+          +"<th>Nombres</th>"
+          +"<th>Apellidos</th>"
+          +"<th>Rol</th>"
+          +"<th>Opciones</th>"
+        +"</tr>"
+        +"<tr>"
+          +"<td>1</td>"
+          +"<td>Raul</td>"
+          +"<td>Gonzalez</td>"
+          +"<td>Docente</td>"
+          +"<td>"
+            +"<center>"
+            +"<button class='btn btn-danger'>Eliminar</button> "
+            +"<button class='btn btn-info'>Actualizar</button>"
+            +"</center>"
+          +"</td>"
+        +"</tr>"
+      +"</table>";
+
+      $("#informacion").html(info);
+  }
+
+  function gestionasig(){
+    
+    $("#titulo").html("Gestion de Asignaturas");
+
+    var info="<table class='table table-striped table-bordered'>"
+        +"<tr>"
+          +"<th>No</th>"
+          +"<th>Asignatura</th>"
+          +"<th>Fecha Inicio</th>"
+          +"<th>Fecha Terminacion</th>"
+          +"<th>Creditos</th>"
+          +"<th>Opciones</th>"
+        +"</tr>"
+        +"<tr>"
+          +"<td>1</td>"
+          +"<td><center>Programacion II</center></td>"
+          +"<td><center>01-01-2020</center></td>"
+          +"<td><center>01-06-2020</center></td>"
+          +"<td><center>5</center></td>"
+          +"<td>"
+            +"<center>"
+            +"<button class='btn btn-danger'>Eliminar</button> "
+            +"<button class='btn btn-info'>Actualizar</button>"
+            +"</center>"
+          +"</td>"
+        +"</tr>"
+      +"</table>";
+
+      $("#informacion").html(info);
+  }
+
+  function gestioncurso(){
+    
+    $("#titulo").html("Gestion de Cursos");
+
+    var info="<table class='table table-striped table-bordered'>"
+        +"<tr>"
+          +"<th>No</th>"
+          +"<th>Nombre</th>"
+          +"<th>Descripcion</th>"
+          +"<th>Decano</th>"
+          +"<th>Opciones</th>"
+        +"</tr>"
+        +"<tr>"
+          +"<td>1</td>"
+          +"<td>Ingenieria de Mecatronica</td>"
+          +"<td>Faculta de ciencias de la computacion</td>"
+          +"<td><center>Ronaldo</center></td>"
+          +"<td>"
+            +"<center>"
+            +"<button class='btn btn-danger'>Eliminar</button> "
+            +"<button class='btn btn-info'>Actualizar</button>"
+            +"</center>"
+          +"</td>"
+        +"</tr>"
+      +"</table>";
+
+      $("#informacion").html(info);
+  }
+
+  //////////////////////
+  function  misdtos(){
+    $("#titulo").html("Mis datos");
+
+    var info="<table class='table table-striped table-bordered'>"
+      +"<tr>"
+        +"<th>Nombres</th>"
+        +"<th>Apellidos</th>"
+        +"<th>Correo Electronico</th>"
+        +"<th>Celular</th>" 
+      +"</tr>"
+      +"<tr>"
+        +"<td>Jose</td>"
+        +"<td>Duarte</td>"
+        +"<td>edgarjd@uninorte.edu.co</td>"
+        +"<td>3137971877</td>"
+      +"</tr>" 
+    +"</table>";
+
+    $("#informacion").html(info);
+
+    }
+
+    function calif_estudiantes(){
+    
+    $("#titulo").html("Calificaciones Estudiante");
+
+    var info="<table class='table table-striped table-bordered'>"
+        +"<tr>"
+          +"<th>No</th>"
+          +"<th>Nombres</th>"
+          +"<th>Curso</th>"
+          +"<th>Asignatura</th>"
+          +"<th>Calificacion Final</th>"
+          +"<th>Opciones</th>"
+        +"</tr>"
+        +"<tr>"
+          +"<td>1</td>"
+          +"<td>Raul Gonzalez</td>"
+          +"<td>Ingieneria Mecatronica</td>"
+          +"<td><center>Programacion II</center></td>"
+          +"<td><center>4.5</center></td>"
+          +"<td>"
+            +"<center>"
+            +"<button class='btn btn-info'>Ver Actividades</button> "
+            +"</center>"
+          +"</td>"
+        +"</tr>"
+      +"</table>";
+
+      $("#informacion").html(info);
+  }
+
+  function curso_estudiate(){
+    
+    $("#titulo").html("Cursos Inscritos");
+
+    var info="<table class='table table-striped table-bordered'>"
+        +"<tr>"
+          +"<th>No</th>"
+          +"<th>Nombre</th>"
+          +"<th>Descripcion</th>"
+          +"<th>Decano</th>"
+          +"<th>Creditos</th>"
+          +"<th>Opciones</th>"
+        +"</tr>"
+        +"<tr>"
+          +"<td>1</td>"
+          +"<td>Ingenieria Mecatronica</td>"
+          +"<td>Facultad Ciencias de la computacion</td>"
+          +"<td><center>Cristiano Ronaldo</center></td>"
+          +"<td><center>8</center></td>"
+          +"<td>"
+            +"<center>"
+            +"<button class='btn btn-info'>Listado Estudiantes</button> "
+            +"</center>"
+          +"</td>"
+        +"</tr>"
+      +"</table>";
+
+      $("#informacion").html(info);
+  }
+
+ 
+</script>
+
+</body>
+</html>
+
 
