@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gestion de Notas Institucion</title>
+  <title>Notas UniTolima</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -52,9 +52,9 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Gestion de Notas</span>
+      <span class="brand-text font-weight-light">UniTolima</span>
     </a>
 
     <!-- Sidebar -->
@@ -65,7 +65,7 @@
           <img src="https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Jose Duarte </a>
+          <a href="#" class="d-block">Universidad del Tolima</a>
         </div>
       </div>
 
@@ -93,19 +93,19 @@
                       <p>Gestionar Usuarios</p>
                     </a>
                   </li>
-                  <li onclick="gestiondocente()" class="nav-item">
+                  <li onclick="gestionarDocente()" class="nav-item">
                     <a  class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Gestionar Docentes</p>
                     </a>
                   </li>
-                  <li onclick="gestionasig()" class="nav-item">
+                  <li class="nav-item">
                     <a  class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Gestionar Asignaturas</p>
                     </a>
                   </li>
-                  <li onclick="gestioncurso()" class="nav-item">
+                  <li onclick="gestionarCursos()" class="nav-item">
                     <a  class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Gestionar Cursos</p>
@@ -123,6 +123,9 @@
                 </ul>
               </li>
 
+
+
+
                <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-edit"></i>
@@ -133,7 +136,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   
-                  <li class="nav-item">
+                  <li onclick="gestionarCursos()" class="nav-item">
                     <a  class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Gestionar cursos</p>
@@ -159,13 +162,13 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li onclick="calif_estudiantes()" class="nav-item">
+              <li class="nav-item">
                 <a  class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Mis Calificaciones</p>
                 </a>
               </li>
-              <li onclick="curso_estudiate()" class="nav-item">
+              <li onclick="gestionarCursos()" class="nav-item">
                 <a  class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Mis Cursos</p>
@@ -251,6 +254,15 @@
 </div>
 <!-- ./wrapper -->
 
+
+
+
+<!-- CodeMirror -->
+<script src="https://adminlte.io/themes/v3/plugins/codemirror/codemirror.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/codemirror/mode/css/css.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/codemirror/mode/xml/xml.js"></script>
+<script src="https://adminlte.io/themes/v3/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
 <!-- jQuery -->
 <script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -296,14 +308,12 @@
           +"<th>No</th>"
           +"<th>Nombres</th>"
           +"<th>Apellidos</th>"
-          +"<th>Rol</th>"
           +"<th>Opciones</th>"
         +"</tr>"
         +"<tr>"
           +"<td>1</td>"
-          +"<td>Raul</td>"
-          +"<td>Gonzalez</td>"
-          +"<td>Estudiante</td>"
+          +"<td>Roger </td>"
+          +"<td>Hernandez </td>"
           +"<td>"
             +"<center>"
             +"<button class='btn btn-danger'>Eliminar</button> "
@@ -311,28 +321,37 @@
             +"</center>"
           +"</td>"
         +"</tr>"
+        +"<tr>"
+          +"<td>2</td>"
+          +"<td>Benjamin </td>"
+          +"<td>Hernandez </td>"
+          +"<td>"
+            +"<center>"
+              +"<button class='btn btn-danger'>Eliminar</button> "
+              +"<button class='btn btn-info'>Actualizar</button>"
+              +"</center>"
+          +"</td>"
+        +"</tr>"
       +"</table>";
 
       $("#informacion").html(info);
+
+
   }
-
-  function gestiondocente(){
-    
-    $("#titulo").html("Gestion de Docentes");
-
+  ////////////////////////
+  function gestionarDocente(){
+    $("#titulo").html("Gestion de Docente");
     var info="<table class='table table-striped table-bordered'>"
         +"<tr>"
           +"<th>No</th>"
           +"<th>Nombres</th>"
           +"<th>Apellidos</th>"
-          +"<th>Rol</th>"
           +"<th>Opciones</th>"
         +"</tr>"
         +"<tr>"
           +"<td>1</td>"
-          +"<td>Raul</td>"
-          +"<td>Gonzalez</td>"
-          +"<td>Docente</td>"
+          +"<td>Roger </td>"
+          +"<td>Hernandez </td>"
           +"<td>"
             +"<center>"
             +"<button class='btn btn-danger'>Eliminar</button> "
@@ -340,35 +359,15 @@
             +"</center>"
           +"</td>"
         +"</tr>"
-      +"</table>";
-
-      $("#informacion").html(info);
-  }
-
-  function gestionasig(){
-    
-    $("#titulo").html("Gestion de Asignaturas");
-
-    var info="<table class='table table-striped table-bordered'>"
         +"<tr>"
-          +"<th>No</th>"
-          +"<th>Asignatura</th>"
-          +"<th>Fecha Inicio</th>"
-          +"<th>Fecha Terminacion</th>"
-          +"<th>Creditos</th>"
-          +"<th>Opciones</th>"
-        +"</tr>"
-        +"<tr>"
-          +"<td>1</td>"
-          +"<td><center>Programacion II</center></td>"
-          +"<td><center>01-01-2020</center></td>"
-          +"<td><center>01-06-2020</center></td>"
-          +"<td><center>5</center></td>"
+          +"<td>2</td>"
+          +"<td>Benjamin </td>"
+          +"<td>Hernandez </td>"
           +"<td>"
             +"<center>"
-            +"<button class='btn btn-danger'>Eliminar</button> "
-            +"<button class='btn btn-info'>Actualizar</button>"
-            +"</center>"
+              +"<button class='btn btn-danger'>Eliminar</button> "
+              +"<button class='btn btn-info'>Actualizar</button>"
+              +"</center>"
           +"</td>"
         +"</tr>"
       +"</table>";
@@ -376,28 +375,48 @@
       $("#informacion").html(info);
   }
 
-  function gestioncurso(){
-    
+  /////////////////////////
+  ////////////////////////
+  function gestionarCursos(){
     $("#titulo").html("Gestion de Cursos");
-
     var info="<table class='table table-striped table-bordered'>"
         +"<tr>"
           +"<th>No</th>"
-          +"<th>Nombre</th>"
-          +"<th>Descripcion</th>"
-          +"<th>Decano</th>"
-          +"<th>Opciones</th>"
+          +"<th>Nombre Asignatura</th>"
+          +"<th>Horario</th>"
+          +"<th>Capacidad</th>"
+          +"<th>Fecha de inicio</th>"
+          +"<th>Fecha de finalización</th>"
+          +"<td>Opciones</td>"
         +"</tr>"
         +"<tr>"
           +"<td>1</td>"
-          +"<td>Ingenieria de Mecatronica</td>"
-          +"<td>Faculta de ciencias de la computacion</td>"
-          +"<td><center>Ronaldo</center></td>"
+          +"<td>Programación</td>"
+          +"<th>L-W-V 8AM-10AM</th>"
+          +"<th>30 estudiantes</th>"          
+          +"<td>30 de enero del 2023</td>"
+          +"<td>30 de mayo del 2023</td>"
           +"<td>"
             +"<center>"
-            +"<button class='btn btn-danger'>Eliminar</button> "
-            +"<button class='btn btn-info'>Actualizar</button>"
-            +"</center>"
+              +"<button class='btn btn-info'>Alumnos</button> "
+              +"<button class='btn btn-success'>Temas</button>"
+              +"<button class='btn btn-warning'>Actividades</button>"
+              +"</center>"
+          +"</td>"
+        +"</tr>"
+        +"<tr>"
+          +"<td>2</td>"
+          +"<td>Bases de datos</td>"
+          +"<th>M-J- 8AM-10AM</th>"
+          +"<th>30 estudiantes</th>"          
+          +"<td>30 de enero del 2023</td>"
+          +"<td>30 de mayo del 2023</td>"
+          +"<td>"
+            +"<center>"
+              +"<button class='btn btn-info'>Alumnos</button> "
+              +"<button class='btn btn-success'>Temas</button>"
+              +"<button class='btn btn-warning'>Actividades</button>"
+              +"</center>"
           +"</td>"
         +"</tr>"
       +"</table>";
@@ -413,85 +432,157 @@
       +"<tr>"
         +"<th>Nombres</th>"
         +"<th>Apellidos</th>"
-        +"<th>Correo Electronico</th>"
-        +"<th>Celular</th>" 
+        +"<th>Nacimiento</th>"
+        +"<th>No. Documento</th>"
+        +"<th>Correo</th>"
+        +"<th>Carrera</th>"
+        +"<th>Telefono</th>"
+        +"<th>opciones</th>"       
       +"</tr>"
       +"<tr>"
-        +"<td>Jose</td>"
-        +"<td>Duarte</td>"
-        +"<td>edgarjd@uninorte.edu.co</td>"
-        +"<td>3137971877</td>"
-      +"</tr>" 
+        +"<td>Juan José</td>"
+        +"<td>Rojas Silva</td>"
+        +"<td>18/05/2010</td>"
+        +"<td>56655444</td>"
+        +"<td>juan@unitolima.edu.co</td>"
+        +"<td>Ing. Sistemas</td>"
+        +"<td>3153153154</td>"
+        +"<td><button onclick='actualizarDatos()'' class='btn btn-success'>Actualizar</button></td>"       
+      +"</tr>"     
     +"</table>";
 
     $("#informacion").html(info);
+  }
+  function actualizarDatos(){
+    $("#titulo").html("Actualizar datos");
 
-    }
+    var info="<div class='card card-default'>"
+      +"<div class='card-header'>"
+            +"<h3 class='card-title'>Select2 (Default Theme)</h3>"
 
-    function calif_estudiantes(){
-    
-    $("#titulo").html("Calificaciones Estudiante");
+            +"<div class='card-tools'>"
+              +"<button type='button' class='btn btn-tool' data-card-widget='collapse'>"
+                +"<i class='fas fa-minus'></i>"
+              +"</button>"
+              +"<button type='button' class='btn btn-tool' data-card-widget='remove'>"
+                +"<i class='fas fa-times'></i>"
+              +"</button>"
+            +"</div>"
+          +"</div>"
+          +"<!-- /.card-header -->"
+      +"<div class='card-body'>"
+            +"<div class='row'>"
+              +"<div class='col-md-6'>"
+                +"<div class='form-group'>"
+                  +"<label>Minimal</label>"
+                  +"<select class='form-control select2' style='width: 100%;'>"
+                    +"<option selected='selected'>Alabama</option>"
+                    +"<option>Alaska</option>"
+                    +"<option>California</option>"
+                    +"<option>Delaware</option>"
+                    +"<option>Tennessee</option>"
+                    +"<option>Texas</option>"
+                    +"<option>Washington</option>"
+                  +"</select>"
+                +"</div>"
+                +"<!-- /.form-group -->"
+                +"<div class='form-group'>"
+                  +"<label>Disabled</label>"
+                  +"<select class='form-control select2' disabled='disabled' style='width: 100%;'>"
+                    +"<option selected='selected'>Alabama</option>"
+                    +"<option>Alaska</option>"
+                    +"<option>California</option>"
+                    +"<option>Delaware</option>"
+                    +"<option>Tennessee</option>"
+                    +"<option>Texas</option>"
+                    +"<option>Washington</option>"
+                  +"</select>"
+                +"</div>"
+                +"<!-- /.form-group -->"
+              +"</div>"
+              +"<!-- /.col -->"
+              +"<div class='col-md-6'>"
+                +"<div class='form-group'>"
+                  +"<label>Multiple</label>"
+                  +"<select class='select2' multiple='multiple' data-placeholder='Select a State' style='width: 100%;'>"
+                    +"<option>Alabama</option>"
+                    +"<option>Alaska</option>"
+                    +"<option>California</option>"
+                    +"<option>Delaware</option>"
+                    +"<option>Tennessee</option>"
+                    +"<option>Texas</option>"
+                    +"<option>Washington</option>"
+                  +"</select>"
+                +"</div>"
+                +"<!-- /.form-group -->"
+                +"<div class='form-group'>"
+                  +"<label>Disabled Result</label>"
+                  +"<select class='form-control select2' style='width: 100%;'>"
+                    +"<option selected='selected'>Alabama</option>"
+                    +"<option>Alaska</option>"
+                   +"<option disabled='disabled'>California (disabled)</option>"
+                    +"<option>Delaware</option>"
+                    +"<option>Tennessee</option>"
+                    +"<option>Texas</option>"
+                    +"<option>Washington</option>"
+                  +"</select>"
+                +"</div>"
+                +"<!-- /.form-group -->"
+              +"</div>"
+              +"<!-- /.col -->"
+            +"</div>"
+            +"<!-- /.row -->"
 
-    var info="<table class='table table-striped table-bordered'>"
-        +"<tr>"
-          +"<th>No</th>"
-          +"<th>Nombres</th>"
-          +"<th>Curso</th>"
-          +"<th>Asignatura</th>"
-          +"<th>Calificacion Final</th>"
-          +"<th>Opciones</th>"
-        +"</tr>"
-        +"<tr>"
-          +"<td>1</td>"
-          +"<td>Raul Gonzalez</td>"
-          +"<td>Ingieneria Mecatronica</td>"
-          +"<td><center>Programacion II</center></td>"
-          +"<td><center>4.5</center></td>"
-          +"<td>"
-            +"<center>"
-            +"<button class='btn btn-info'>Ver Actividades</button> "
-            +"</center>"
-          +"</td>"
-        +"</tr>"
-      +"</table>";
+            +"<h5>Custom Color Variants</h5>"
+            +"<div class='row'>"
+              +"<div class='col-12 col-sm-6'>"
+                +"<div class='form-group'>"
+                  +"<label>Minimal (.select2-danger)</label>"
+                  +"<select class='form-control select2 select2-danger' data-dropdown-css-class='select2-danger' style='width: 100%;'>"
+                    +"<option selected='selected'>Alabama</option>"
+                    +"<option>Alaska</option>"
+                    +"<option>California</option>"
+                    +"<option>Delaware</option>"
+                    +"<option>Tennessee</option>"
+                    +"<option>Texas</option>"
+                    +"<option>Washington</option>"
+                  +"</select>"
+                +"</div>"
+                +"<!-- /.form-group -->"
+              +"</div>"
+              +"<!-- /.col -->"
+              +"<div class='col-12 col-sm-6'>"
+                +"<div class='form-group'>"
+                  +"<label>Multiple (.select2-purple)</label>"
+                  +"<div class='select2-purple'>"
+                    +"<select class='select2' multiple='multiple' data-placeholder='Select a State' data-dropdown-css-class='select2-purple' style='width: 100%;'>"
+                      +"<option>Alabama</option>"
+                      +"<option>Alaska</option>"
+                      +"<option>California</option>"
+                      +"<option>Delaware</option>"
+                      +"<option>Tennessee</option>"
+                      +"<option>Texas</option>"
+                      +"<option>Washington</option>"
+                    +"</select>"
+                  +"</div>"
+                +"</div>"
+                +"<!-- /.form-group -->"
+              +"</div>"
+              +"<!-- /.col -->"
+            +"</div>"
+            +"<!-- /.row -->"
+          +"</div>"
+          +"<!-- /.card-body -->"
+          +"<div class='card-footer'>"
+            +"Visit <a href='https://select2.github.io/'>Select2 documentation</a> for more examples and information about"
+            +"the plugin."
+          +"</div>"
+        +"</div>";
 
-      $("#informacion").html(info);
+    $("#informacion").html(info);
   }
 
-  function curso_estudiate(){
-    
-    $("#titulo").html("Cursos Inscritos");
-
-    var info="<table class='table table-striped table-bordered'>"
-        +"<tr>"
-          +"<th>No</th>"
-          +"<th>Nombre</th>"
-          +"<th>Descripcion</th>"
-          +"<th>Decano</th>"
-          +"<th>Creditos</th>"
-          +"<th>Opciones</th>"
-        +"</tr>"
-        +"<tr>"
-          +"<td>1</td>"
-          +"<td>Ingenieria Mecatronica</td>"
-          +"<td>Facultad Ciencias de la computacion</td>"
-          +"<td><center>Cristiano Ronaldo</center></td>"
-          +"<td><center>8</center></td>"
-          +"<td>"
-            +"<center>"
-            +"<button class='btn btn-info'>Listado Estudiantes</button> "
-            +"</center>"
-          +"</td>"
-        +"</tr>"
-      +"</table>";
-
-      $("#informacion").html(info);
-  }
-
- 
 </script>
 
 </body>
 </html>
-
-
